@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05060D0014DCF15800D517CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05060CFF14DCF15800D517CD /* UIKit.framework */; };
+		05060D0214DCF15800D517CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05060D0114DCF15800D517CD /* Foundation.framework */; };
+		05060D0414DCF15800D517CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05060D0314DCF15800D517CD /* CoreGraphics.framework */; };
+		05060D0C14DCF15800D517CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D0B14DCF15800D517CD /* main.m */; };
+		05060D1014DCF15800D517CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D0F14DCF15800D517CD /* AppDelegate.m */; };
+		05060D1F14DCF18D00D517CD /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D1D14DCF18D00D517CD /* MenuViewController.m */; };
+		05060D2014DCF18D00D517CD /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05060D1E14DCF18D00D517CD /* MenuViewController.xib */; };
+		05060D2414DCF1C700D517CD /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D2214DCF1C700D517CD /* ContentViewController.m */; };
+		05060D2714DCF2AC00D517CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05060D2614DCF2AC00D517CD /* QuartzCore.framework */; };
+		05060D2A14DCF4B200D517CD /* three_lines@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05060D2914DCF4B200D517CD /* three_lines@2x.png */; };
+		05060D2C14DCF67B00D517CD /* glassboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 05060D2B14DCF67B00D517CD /* glassboard.png */; };
+		05060D3014DCFD8200D517CD /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D2E14DCFD8100D517CD /* FeedViewController.m */; };
+		05060D3114DCFD8200D517CD /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05060D2F14DCFD8100D517CD /* FeedViewController.xib */; };
+		05060D3A14DCFF5500D517CD /* CheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D3814DCFF5500D517CD /* CheckinViewController.m */; };
+		05060D3B14DCFF5500D517CD /* CheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05060D3914DCFF5500D517CD /* CheckinViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05060CFB14DCF15800D517CD /* SpartyLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartyLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05060CFF14DCF15800D517CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		05060D0114DCF15800D517CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		05060D0314DCF15800D517CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		05060D0714DCF15800D517CD /* SpartyLive-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpartyLive-Info.plist"; sourceTree = "<group>"; };
+		05060D0914DCF15800D517CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		05060D0B14DCF15800D517CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		05060D0D14DCF15800D517CD /* SpartyLive-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpartyLive-Prefix.pch"; sourceTree = "<group>"; };
+		05060D0E14DCF15800D517CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		05060D0F14DCF15800D517CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		05060D1C14DCF18D00D517CD /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		05060D1D14DCF18D00D517CD /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		05060D1E14DCF18D00D517CD /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		05060D2114DCF1C700D517CD /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		05060D2214DCF1C700D517CD /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		05060D2614DCF2AC00D517CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		05060D2914DCF4B200D517CD /* three_lines@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "three_lines@2x.png"; path = "assets/three_lines@2x.png"; sourceTree = "<group>"; };
+		05060D2B14DCF67B00D517CD /* glassboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glassboard.png; path = assets/glassboard.png; sourceTree = "<group>"; };
+		05060D2D14DCFD8100D517CD /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		05060D2E14DCFD8100D517CD /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		05060D2F14DCFD8100D517CD /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		05060D3714DCFF5400D517CD /* CheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinViewController.h; sourceTree = "<group>"; };
+		05060D3814DCFF5500D517CD /* CheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinViewController.m; sourceTree = "<group>"; };
+		05060D3914DCFF5500D517CD /* CheckinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckinViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05060CF814DCF15800D517CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05060D2714DCF2AC00D517CD /* QuartzCore.framework in Frameworks */,
+				05060D0014DCF15800D517CD /* UIKit.framework in Frameworks */,
+				05060D0214DCF15800D517CD /* Foundation.framework in Frameworks */,
+				05060D0414DCF15800D517CD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05060CF014DCF15800D517CD = {
+			isa = PBXGroup;
+			children = (
+				05060D2614DCF2AC00D517CD /* QuartzCore.framework */,
+				05060D0514DCF15800D517CD /* SpartyLive */,
+				05060CFE14DCF15800D517CD /* Frameworks */,
+				05060CFC14DCF15800D517CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05060CFC14DCF15800D517CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05060CFB14DCF15800D517CD /* SpartyLive.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05060CFE14DCF15800D517CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05060CFF14DCF15800D517CD /* UIKit.framework */,
+				05060D0114DCF15800D517CD /* Foundation.framework */,
+				05060D0314DCF15800D517CD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05060D0514DCF15800D517CD /* SpartyLive */ = {
+			isa = PBXGroup;
+			children = (
+				05060D2814DCF4A200D517CD /* assets */,
+				05060D0E14DCF15800D517CD /* AppDelegate.h */,
+				05060D0F14DCF15800D517CD /* AppDelegate.m */,
+				05060D1C14DCF18D00D517CD /* MenuViewController.h */,
+				05060D1D14DCF18D00D517CD /* MenuViewController.m */,
+				05060D1E14DCF18D00D517CD /* MenuViewController.xib */,
+				05060D2114DCF1C700D517CD /* ContentViewController.h */,
+				05060D2214DCF1C700D517CD /* ContentViewController.m */,
+				05060D2D14DCFD8100D517CD /* FeedViewController.h */,
+				05060D2E14DCFD8100D517CD /* FeedViewController.m */,
+				05060D2F14DCFD8100D517CD /* FeedViewController.xib */,
+				05060D3714DCFF5400D517CD /* CheckinViewController.h */,
+				05060D3814DCFF5500D517CD /* CheckinViewController.m */,
+				05060D3914DCFF5500D517CD /* CheckinViewController.xib */,
+				05060D0614DCF15800D517CD /* Supporting Files */,
+			);
+			path = SpartyLive;
+			sourceTree = "<group>";
+		};
+		05060D0614DCF15800D517CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05060D0714DCF15800D517CD /* SpartyLive-Info.plist */,
+				05060D0814DCF15800D517CD /* InfoPlist.strings */,
+				05060D0B14DCF15800D517CD /* main.m */,
+				05060D0D14DCF15800D517CD /* SpartyLive-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05060D2814DCF4A200D517CD /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				05060D2B14DCF67B00D517CD /* glassboard.png */,
+				05060D2914DCF4B200D517CD /* three_lines@2x.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05060CFA14DCF15800D517CD /* SpartyLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05060D1914DCF15800D517CD /* Build configuration list for PBXNativeTarget "SpartyLive" */;
+			buildPhases = (
+				05060CF714DCF15800D517CD /* Sources */,
+				05060CF814DCF15800D517CD /* Frameworks */,
+				05060CF914DCF15800D517CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpartyLive;
+			productName = SpartyLive;
+			productReference = 05060CFB14DCF15800D517CD /* SpartyLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05060CF214DCF15800D517CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 05060CF514DCF15800D517CD /* Build configuration list for PBXProject "SpartyLive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05060CF014DCF15800D517CD;
+			productRefGroup = 05060CFC14DCF15800D517CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05060CFA14DCF15800D517CD /* SpartyLive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05060CF914DCF15800D517CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05060D2014DCF18D00D517CD /* MenuViewController.xib in Resources */,
+				05060D2A14DCF4B200D517CD /* three_lines@2x.png in Resources */,
+				05060D2C14DCF67B00D517CD /* glassboard.png in Resources */,
+				05060D3114DCFD8200D517CD /* FeedViewController.xib in Resources */,
+				05060D3B14DCFF5500D517CD /* CheckinViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05060CF714DCF15800D517CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05060D0C14DCF15800D517CD /* main.m in Sources */,
+				05060D1014DCF15800D517CD /* AppDelegate.m in Sources */,
+				05060D1F14DCF18D00D517CD /* MenuViewController.m in Sources */,
+				05060D2414DCF1C700D517CD /* ContentViewController.m in Sources */,
+				05060D3014DCFD8200D517CD /* FeedViewController.m in Sources */,
+				05060D3A14DCFF5500D517CD /* CheckinViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		05060D0814DCF15800D517CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05060D0914DCF15800D517CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05060D1714DCF15800D517CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		05060D1814DCF15800D517CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05060D1A14DCF15800D517CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpartyLive/SpartyLive-Prefix.pch";
+				INFOPLIST_FILE = "SpartyLive/SpartyLive-Info.plist";
+				PRODUCT_NAME = SpartyLive;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		05060D1B14DCF15800D517CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpartyLive/SpartyLive-Prefix.pch";
+				INFOPLIST_FILE = "SpartyLive/SpartyLive-Info.plist";
+				PRODUCT_NAME = SpartyLive;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05060CF514DCF15800D517CD /* Build configuration list for PBXProject "SpartyLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05060D1714DCF15800D517CD /* Debug */,
+				05060D1814DCF15800D517CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05060D1914DCF15800D517CD /* Build configuration list for PBXNativeTarget "SpartyLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05060D1A14DCF15800D517CD /* Debug */,
+				05060D1B14DCF15800D517CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05060CF214DCF15800D517CD /* Project object */;
+}
