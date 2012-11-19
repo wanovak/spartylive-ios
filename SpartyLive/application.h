@@ -1,0 +1,1 @@
+#define APIURL @"http://devapi.spartylive.com/v1"
