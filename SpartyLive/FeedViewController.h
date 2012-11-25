@@ -8,6 +8,16 @@
 
 #import "ContentViewController.h"
 
-@interface FeedViewController : ContentViewController
+@interface FeedViewController : ContentViewController <UITableViewDelegate,
+UITableViewDataSource> {
+    IBOutlet UITableView* mTableView;
+    NSArray *feeds;
+    NSMutableData *responseData;
+    NSString *name;
+}
+
+@property (nonatomic, retain) UITableView* mTableView;
+@property (nonatomic, strong) NSArray* feeds;
+@property (nonatomic, strong) NSMutableData* responseData;
 
 @end

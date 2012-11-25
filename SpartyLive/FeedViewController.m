@@ -11,6 +11,9 @@
 #import "JSONKit.h"
 
 @implementation FeedViewController
+@synthesize mTableView;
+@synthesize feeds;
+@synthesize responseData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -62,21 +65,27 @@
              NSDictionary *results = [jsonString objectFromJSONString];
              NSArray *resArr = [results objectForKey:@"data"];
              
+             [responseData appendData:data];
+             
              for(NSDictionary *record in resArr)
              {
-                 UITableView *tableView;
-                 UITableViewCell *cell = [tableView
-                                          dequeueReusableCellWithIdentifier:@"FeedCell"];
+                 //UITableView *tableView;
+                 /*UITableViewCell *cell = [tableView
+                                          dequeueReusableCellWithIdentifier:@"Cell"];*/
                  
-                 NSString *message = [record objectForKey:@"message"];
+                 //NSString *message = [record objectForKey:@"message"];
                  NSString *firstname = [record objectForKey:@"firstname"];
-                 cell.textLabel.text = message;
-                 cell.detailTextLabel.text = firstname;
-                 NSLog(@"First name: %@", firstname);
+                 //cell.textLabel.text = message;
+                 //cell.detailTextLabel.text = firstname;
+                 //NSLog(@"First name: %@", firstname);
+                 
              }
+             self->feeds = [[NSMutableArray alloc] initWithArray:resArr];
+             [self.mTableView reloadData];
          }
          else if ([data length] == 0 && error == nil)
          {
+             [responseData setLength:0];
              NSLog(@"Nothing was downloaded.");
          }
          else if (error != nil)
@@ -98,6 +107,55 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark Table view methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return 15;
+    //return self->feeds.count;
+}
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSDictionary *dictionary = [self->feeds objectAtIndex:indexPath.row];
+    NSString *message = [dictionary objectForKey:@"message"];
+    NSString *firstname = [dictionary objectForKey:@"firstname"];
+    NSString *thumbnail = [dictionary objectForKey:@"thumbnail"];
+    NSLog(@"Cell first name: %d", indexPath.row);
+    
+    // Set up the cell...
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
+    cell.textLabel.text = [NSString	 stringWithFormat:@"%@", message];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", message];
+    
+    
+    
+    
+    cell.imageView.image = [UIImage imageNamed:@"placeholder.gif"];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	// open a alert with an OK and cancel button
+	NSString *alertString = [NSString stringWithFormat:@"Clicked on row #%d", [indexPath row]];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
+	[alert show];
+	//[alert release];
 }
 
 @end
