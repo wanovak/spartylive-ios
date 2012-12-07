@@ -16,7 +16,7 @@ UITableViewDataSource> {
     NSString *name;
 }
 
-@property (nonatomic, retain) UITableView* mTableView;
+@property (nonatomic, retain) IBOutlet UITableView* mTableView;
 @property (nonatomic, strong) NSArray* feeds;
 @property (nonatomic, strong) NSMutableData* responseData;
 

@@ -19,7 +19,8 @@
 @property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 
 - (IBAction)showFeedViewController;
-- (IBAction)showCheckinController;
+- (IBAction)showDealController;
+- (IBAction)showClassController;
 
 - (void)slideThenHide;
 - (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer ;

@@ -19,9 +19,14 @@
 		05060D2A14DCF4B200D517CD /* three_lines@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05060D2914DCF4B200D517CD /* three_lines@2x.png */; };
 		05060D2C14DCF67B00D517CD /* glassboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 05060D2B14DCF67B00D517CD /* glassboard.png */; };
 		05060D3014DCFD8200D517CD /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D2E14DCFD8100D517CD /* FeedViewController.m */; };
-		05060D3114DCFD8200D517CD /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05060D2F14DCFD8100D517CD /* FeedViewController.xib */; };
-		05060D3A14DCFF5500D517CD /* CheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D3814DCFF5500D517CD /* CheckinViewController.m */; };
-		05060D3B14DCFF5500D517CD /* CheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05060D3914DCFF5500D517CD /* CheckinViewController.xib */; };
+		05060D3A14DCFF5500D517CD /* DealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05060D3814DCFF5500D517CD /* DealViewController.m */; };
+		05060D3B14DCFF5500D517CD /* DealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05060D3914DCFF5500D517CD /* DealViewController.xib */; };
+		BE17840F16690CAD0021B881 /* placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = BE17840E16690CAD0021B881 /* placeholder.gif */; };
+		BE17841116690FD10021B881 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE17841316690FD10021B881 /* FeedViewController.xib */; };
+		BE17841C166922950021B881 /* ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE17841A166922950021B881 /* ClassViewController.m */; };
+		BE17841D166922950021B881 /* ClassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE17841B166922950021B881 /* ClassViewController.xib */; };
+		BE17842A167253190021B881 /* ClassDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE178428167253190021B881 /* ClassDetailViewController.m */; };
+		BE17842B167253190021B881 /* ClassDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE178429167253190021B881 /* ClassDetailViewController.xib */; };
 		BE8B8922165021FD0090F362 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8B8921165021FD0090F362 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BE8B8924165023D60090F362 /* application.h in Resources */ = {isa = PBXBuildFile; fileRef = BE8B8923165023D60090F362 /* application.h */; };
 /* End PBXBuildFile section */
@@ -47,10 +52,17 @@
 		05060D2B14DCF67B00D517CD /* glassboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glassboard.png; path = assets/glassboard.png; sourceTree = "<group>"; };
 		05060D2D14DCFD8100D517CD /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		05060D2E14DCFD8100D517CD /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
-		05060D2F14DCFD8100D517CD /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
-		05060D3714DCFF5400D517CD /* CheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinViewController.h; sourceTree = "<group>"; };
-		05060D3814DCFF5500D517CD /* CheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinViewController.m; sourceTree = "<group>"; };
-		05060D3914DCFF5500D517CD /* CheckinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckinViewController.xib; sourceTree = "<group>"; };
+		05060D3714DCFF5400D517CD /* DealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealViewController.h; sourceTree = "<group>"; };
+		05060D3814DCFF5500D517CD /* DealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealViewController.m; sourceTree = "<group>"; };
+		05060D3914DCFF5500D517CD /* DealViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DealViewController.xib; sourceTree = "<group>"; };
+		BE17840E16690CAD0021B881 /* placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = placeholder.gif; path = assets/placeholder.gif; sourceTree = "<group>"; };
+		BE17841216690FD10021B881 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FeedViewController.xib; sourceTree = "<group>"; };
+		BE178419166922950021B881 /* ClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassViewController.h; sourceTree = "<group>"; };
+		BE17841A166922950021B881 /* ClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassViewController.m; sourceTree = "<group>"; };
+		BE17841B166922950021B881 /* ClassViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassViewController.xib; sourceTree = "<group>"; };
+		BE178427167253190021B881 /* ClassDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDetailViewController.h; sourceTree = "<group>"; };
+		BE178428167253190021B881 /* ClassDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDetailViewController.m; sourceTree = "<group>"; };
+		BE178429167253190021B881 /* ClassDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassDetailViewController.xib; sourceTree = "<group>"; };
 		BE8B8920165021FD0090F362 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = SpartyLive/JSONKit.h; sourceTree = "<group>"; };
 		BE8B8921165021FD0090F362 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = SpartyLive/JSONKit.m; sourceTree = "<group>"; };
 		BE8B8923165023D60090F362 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
@@ -114,11 +126,17 @@
 				05060D2214DCF1C700D517CD /* ContentViewController.m */,
 				05060D2D14DCFD8100D517CD /* FeedViewController.h */,
 				05060D2E14DCFD8100D517CD /* FeedViewController.m */,
+				BE17841316690FD10021B881 /* FeedViewController.xib */,
 				BE8B8923165023D60090F362 /* application.h */,
-				05060D2F14DCFD8100D517CD /* FeedViewController.xib */,
-				05060D3714DCFF5400D517CD /* CheckinViewController.h */,
-				05060D3814DCFF5500D517CD /* CheckinViewController.m */,
-				05060D3914DCFF5500D517CD /* CheckinViewController.xib */,
+				BE178419166922950021B881 /* ClassViewController.h */,
+				BE17841A166922950021B881 /* ClassViewController.m */,
+				BE17841B166922950021B881 /* ClassViewController.xib */,
+				BE178427167253190021B881 /* ClassDetailViewController.h */,
+				BE178428167253190021B881 /* ClassDetailViewController.m */,
+				BE178429167253190021B881 /* ClassDetailViewController.xib */,
+				05060D3714DCFF5400D517CD /* DealViewController.h */,
+				05060D3814DCFF5500D517CD /* DealViewController.m */,
+				05060D3914DCFF5500D517CD /* DealViewController.xib */,
 				05060D0614DCF15800D517CD /* Supporting Files */,
 			);
 			path = SpartyLive;
@@ -138,6 +156,7 @@
 		05060D2814DCF4A200D517CD /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				BE17840E16690CAD0021B881 /* placeholder.gif */,
 				05060D2B14DCF67B00D517CD /* glassboard.png */,
 				05060D2914DCF4B200D517CD /* three_lines@2x.png */,
 			);
@@ -197,9 +216,12 @@
 				05060D2014DCF18D00D517CD /* MenuViewController.xib in Resources */,
 				05060D2A14DCF4B200D517CD /* three_lines@2x.png in Resources */,
 				05060D2C14DCF67B00D517CD /* glassboard.png in Resources */,
-				05060D3114DCFD8200D517CD /* FeedViewController.xib in Resources */,
-				05060D3B14DCFF5500D517CD /* CheckinViewController.xib in Resources */,
+				BE17841116690FD10021B881 /* FeedViewController.xib in Resources */,
+				05060D3B14DCFF5500D517CD /* DealViewController.xib in Resources */,
 				BE8B8924165023D60090F362 /* application.h in Resources */,
+				BE17840F16690CAD0021B881 /* placeholder.gif in Resources */,
+				BE17841D166922950021B881 /* ClassViewController.xib in Resources */,
+				BE17842B167253190021B881 /* ClassDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +237,10 @@
 				05060D1F14DCF18D00D517CD /* MenuViewController.m in Sources */,
 				05060D2414DCF1C700D517CD /* ContentViewController.m in Sources */,
 				05060D3014DCFD8200D517CD /* FeedViewController.m in Sources */,
-				05060D3A14DCFF5500D517CD /* CheckinViewController.m in Sources */,
+				05060D3A14DCFF5500D517CD /* DealViewController.m in Sources */,
 				BE8B8922165021FD0090F362 /* JSONKit.m in Sources */,
+				BE17841C166922950021B881 /* ClassViewController.m in Sources */,
+				BE17842A167253190021B881 /* ClassDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +253,14 @@
 				05060D0914DCF15800D517CD /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE17841316690FD10021B881 /* FeedViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE17841216690FD10021B881 /* en */,
+			);
+			name = FeedViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

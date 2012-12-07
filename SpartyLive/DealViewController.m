@@ -1,18 +1,18 @@
 //
-//  FeedViewController.m
+//  DealViewController.m
 //  SpartyLive
 //
 //  Created by Will on 11/4/12.
 //  Copyright (c) 2012 SpartyLive LLC. All rights reserved.
 //
 
-#import "FeedViewController.h"
+#import "DealViewController.h"
 #import "application.h"
 #import "JSONKit.h"
 
-@implementation FeedViewController
+@implementation DealViewController
 @synthesize mTableView;
-@synthesize feeds;
+@dynamic deals;
 @synthesize responseData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,48 +38,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    [UIView animateWithDuration:2.0 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
-        [self.logoImageView setFrame:CGRectMake(self.logoImageView.frame.origin.x, self.logoImageView.frame.origin.y, 300, 300)];
+    [UIView animateWithDuration:1.5 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
+        self.logoImageView.alpha = 0;
     }
                      completion:^(BOOL finished){  }];
     
-    
     // Send request to API
-    NSString *urlAsString = APIURL @"/Feed/latest/";
-    NSURL *url = [NSURL URLWithString:urlAsString];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    
-    [NSURLConnection
-     sendAsynchronousRequest: urlRequest
-     queue: [[NSOperationQueue alloc] init]
-     completionHandler:^(NSURLResponse *reponse,
-                         NSData *data,
-                         NSError *error)
-     {
-         if([data length] > 0 && error == nil)
-         {
-             // Result successfully received
-             NSString *jsonString = [[NSString alloc] initWithData: data encoding:NSUTF8StringEncoding];
-             NSLog(@"Here is what we got: %@", jsonString);
-             NSDictionary *results = [jsonString objectFromJSONString];
-             NSArray *resArr = [results objectForKey:@"data"];
-             
-             [responseData appendData:data];
-             self->feeds = [[NSMutableArray alloc] initWithArray:resArr];
-             [self.mTableView reloadData];
-         }
-         else if ([data length] == 0 && error == nil)
-         {
-             [responseData setLength:0];
-             NSLog(@"Nothing was downloaded.");
-         }
-         else if (error != nil)
-         {
-             NSLog(@"Error = %@", error);
-         }
-     }];
-      
+    NSString *urlAsString = APIURL @"/deals/latest/";
+    [self getJsonFromUrl:urlAsString];
 }
 
 - (void)viewDidUnload
@@ -108,9 +74,9 @@
     // @todo this is hacky... can't get member variable with correct context otherwise
     // side-effects: view must be interacted with before loading ends
     //
-    self.mTableView = tableView;
+    //mTableView = tableView;
     
-    int count = self->feeds.count;
+    int count = self->deals.count;
     
     if(count == 0)
     {
@@ -127,7 +93,7 @@
     static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
     
     // add a placeholder cell while waiting on table data
-    int nodeCount = [self->feeds count];
+    int nodeCount = [self->deals count];
     
     if(nodeCount == 0 && indexPath.row == 0)
     {
@@ -135,7 +101,7 @@
         if(cell == nil)
         {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                           reuseIdentifier:PlaceholderCellIdentifier];
+                                          reuseIdentifier:PlaceholderCellIdentifier];
             cell.detailTextLabel.textAlignment = UITextAlignmentCenter;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
@@ -152,32 +118,66 @@
     
     if(nodeCount > 0)
     {
-    
-        NSDictionary *dictionary = [self->feeds objectAtIndex:indexPath.row];
-        NSString *message = [dictionary objectForKey:@"message"];
-        NSString *firstname = [dictionary objectForKey:@"firstname"];
-        NSString *lastname = [dictionary objectForKey:@"lastname"];
-        NSString *thumbnail = [dictionary objectForKey:@"thumbnail"];
-        NSURL *thumbURL = [NSURL URLWithString:thumbnail];
-        NSLog(@"Cell first name: %d", indexPath.row);
-    
+        NSDictionary *dictionary = [self->deals objectAtIndex:indexPath.row];
         // Set up the cell...
         cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
-        cell.textLabel.text = [NSString	 stringWithFormat:@"%@", message];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", firstname, lastname];
-        cell.imageView.image = [UIImage imageWithData: [NSData dataWithContentsOfURL:thumbURL]];
+        
+
+            NSString *company = [dictionary objectForKey:@"company"];
+            NSString *description = [dictionary objectForKey:@"description"];
+            
+            cell.textLabel.text = [NSString stringWithFormat:@"%@", description];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", company];
+
     }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	// open a alert with an OK and cancel button
-	//NSString *alertString = [NSString stringWithFormat:@"Clicked on row #%d", [indexPath row]];
-	//UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
-	//[alert show];
-	//[alert release];
-    NSLog(@"Click event on feed");
+    
+    
 }
+
+- (void)getJsonFromUrl:(NSString *)urlAsString {
+    NSURL *url = [NSURL URLWithString:urlAsString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection
+     sendAsynchronousRequest: urlRequest
+     queue: [[NSOperationQueue alloc] init]
+     completionHandler:^(NSURLResponse *reponse,
+                         NSData *data,
+                         NSError *error)
+     {
+         if([data length] > 0 && error == nil)
+         {
+             // Result successfully received
+             NSString *jsonString = [[NSString alloc] initWithData: data encoding:NSUTF8StringEncoding];
+             //NSLog(@"Here is what we got: %@", jsonString);
+             NSDictionary *results = [jsonString objectFromJSONString];
+             
+             NSDictionary *resDic = [results objectForKey:@"data"];
+             NSArray *resArr = [resDic objectForKey:@"deal"];
+             //NSLog(@"%@", [resArr class]);
+             
+             [responseData appendData:data];
+             self->deals = [[NSMutableArray alloc] initWithArray:resArr];
+
+             [self.mTableView reloadData];
+             
+         }
+         else if ([data length] == 0 && error == nil)
+         {
+             [self.responseData setLength:0];
+             NSLog(@"Nothing was downloaded.");
+         }
+         else if (error != nil)
+         {
+             NSLog(@"Error = %@", error);
+         }
+     }];
+}
+
 
 @end

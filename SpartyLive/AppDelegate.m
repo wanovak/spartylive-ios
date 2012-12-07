@@ -12,8 +12,10 @@
 #import "AppDelegate.h"
 #import "ContentViewController.h"
 #import "FeedViewController.h"
-#import "CheckinViewController.h"
+#import "DealViewController.h"
 #import "MenuViewController.h"
+#import "ClassViewController.h"
+#import "ClassDetailViewController.h"
 
 @implementation AppDelegate
 

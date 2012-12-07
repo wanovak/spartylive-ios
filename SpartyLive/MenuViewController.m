@@ -11,7 +11,8 @@
 
 #import "MenuViewController.h"
 #import "FeedViewController.h"
-#import "CheckinViewController.h"
+#import "DealViewController.h"
+#import "ClassViewController.h"
 
 @implementation MenuViewController
 @synthesize screenShotImageView, screenShotImage, tapGesture, panGesture;
@@ -100,11 +101,20 @@
     [self slideThenHide];
 }
 
-- (IBAction)showCheckinController
+- (IBAction)showDealController
 {
     // This sets the currentViewController on the app_delegate to the expanding view controller
     // - then slides the screenshot back over
-    [app_delegate setContentViewController:[[CheckinViewController alloc] initWithNibName:@"CheckinViewController" bundle:nil]];
+    [app_delegate setContentViewController:[[DealViewController alloc] initWithNibName:@"DealViewController" bundle:nil]];
+    [self slideThenHide];
+}
+
+- (IBAction)showClassController
+{
+    // This sets the currentViewControlelr on the app_delegate to the expanding view controller
+    // - then slides the screenshot back over
+    [app_delegate setContentViewController:[[ClassViewController alloc] initWithNibName:
+        @"ClassViewController" bundle:nil]];
     [self slideThenHide];
 }
 
